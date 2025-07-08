@@ -1,7 +1,6 @@
 package com.fatec.agenda_contatos.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,11 +11,11 @@ public class Contato implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     
     private String nome;
     private String sobrenome;
-    private LocalDate dataNascimento;
+    private String dataNascimento;
     private String telefone;
     private String email;
     private String endereco;
@@ -25,10 +24,10 @@ public class Contato implements Serializable {
     private String notas;
     private String redesSociais;
    
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getNome() {
@@ -43,10 +42,10 @@ public class Contato implements Serializable {
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
-    public LocalDate getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
-    public void setDataNascimento(LocalDate dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     public String getTelefone() {
